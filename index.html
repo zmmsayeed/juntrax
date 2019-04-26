@@ -53,7 +53,7 @@
     <div class="content">
         <div class="card">
             <h2 class="card-heading">₹ 6,000</h2>
-            <h3 class="card-subhead">10 Bills Received Total</h3>
+            <h3 class="card-subhead">10 Bills Received</h3>
             <h3 class="card-link"><a href="#">See Breakup</a></h3>
             <img src="img/bills.png" alt="">
         </div>
@@ -77,7 +77,32 @@
         </div>
     </div>
 
-    <!-- <button id="button">Click Me</button> -->
+    <div class="tab-div">
+        <div class="tabs">
+            <button class="tablinks" onclick="openBills(event, 'AllBills')">All Bills</button>
+            <button class="tablinks" onclick="openBills(event, 'PendingBills')">Pending Bills</button>
+            <button class="tablinks" onclick="openBills(event, 'BillReport')">Bill Report</button>
+        </div>
+    </div>
+
+    <div class="tabscontents">
+        <div id="AllBills" class="tabcontent">
+            <h3>All Bill</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="PendingBills" class="tabcontent">
+            <h3>Pending Bills</h3>
+            <p>Paris is the capital of France.</p> 
+        </div>
+        
+        <div id="BillReport" class="tabcontent">
+            <h3>Bill Report</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    <button id="button">Click Me</button>
 </main>
 
 <div class="bg-modal">

@@ -234,6 +234,15 @@ main {
         width: 40%;
         margin-top: 3%;
     }
+    .card:hover {
+        background-color: white;
+    }
+}
+
+
+
+.card:hover {
+    background-color: rgba(165, 199, 255, 0.7);
 }
 
 @media screen and (max-width: 900px) {
@@ -241,8 +250,10 @@ main {
         width: 40%;
         margin-top: 3%;
     }
+    .card:hover {
+        background-color: white;
+    }
 }
-
 .card-heading {
     font-weight: 500;
     margin: 0;
@@ -282,4 +293,47 @@ main {
     .card > img {
         display: none;
     }
+}
+
+.tab-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tabs {
+    margin-top: 3%;
+    display: block;
+    background: white;
+    border-radius: 50px 50px;
+    overflow: hidden;
+}
+
+.tabs > button {
+    border: 0;
+    padding: 15px 25px;
+    margin: 0;
+    background: white;
+    border-radius: 50px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.tabs > button.active {
+    background: linear-gradient(to right, #367FD6 , #4CD0FE);
+    color: white;
+}
+
+.tabcontent {
+    display: none;    
+}
+
+.tabscontents {
+    width: 90%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
 }
