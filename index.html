@@ -77,38 +77,420 @@
         </div>
     </div>
 
-    <div class="tab-div">
-        <div class="tabs">
-            <button class="tablinks" onclick="openBills(event, 'AllBills')">All Bills</button>
-            <button class="tablinks" onclick="openBills(event, 'PendingBills')">Pending Bills</button>
-            <button class="tablinks" onclick="openBills(event, 'BillReport')">Bill Report</button>
+    
+    <div class="row">
+
+        <div class="second-half">
+            <button id="button"><i class="fas fa-plus" style="margin-right: 15px; color: blue;"></i>Add New</button>
+        </div>
+
+        <div class="first-half">
+            <div class="tab-div">
+                <div class="tabs">
+                    <button class="tablinks" onclick="openBills(event, 'AllBills')">All Bills</button>
+                    <button class="tablinks" onclick="openBills(event, 'PendingBills')">Pending Bills</button>
+                    <button class="tablinks" onclick="openBills(event, 'BillReport')">Bill Report</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="tabscontents">
+            <div id="AllBills" class="tabcontent">                
+                <table>
+                    <tr>
+                        <th class="lastandfirst"></th>
+                        <th>Bill Name</th>
+                        <th>Paid By</th> 
+                        <th>Date of Bill</th>
+                        <th>Date of Submission</th>
+                        <th>Amount(₹)</th>
+                        <th>Verified Status</th>
+                        <th>Status</th>
+                        <th class="lastandfirst"></th>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Team Lunch at Starbucks</td>
+                        <td>Cash</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Cloud Space Storage</td>
+                        <td>Credit Card</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Pending</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Team Lunch at Starbucks</td>
+                        <td>Cash</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Complete</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Cloud Space Storage</td>
+                        <td>Credit Card</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Team Lunch at Starbucks</td>
+                        <td>Cash</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: red;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                    <tr class="list">
+                        <td class="lastandfirst"><div class="round">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox"></label>
+                            </div>
+                        </td>
+                        <td>Cloud Space Storage</td>
+                        <td>Credit Card</td> 
+                        <td>10 Oct 2018</td>
+                        <td>10 Oct 2018</td>
+                        <td>3390.47</td>
+                        <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                        <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                        <td class="lastandfirst">...</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="PendingBills" class="tabcontent">
+                    <table>
+                            <tr>
+                                <th class="lastandfirst"></th>
+                                <th>Pending Name</th>
+                                <th>Paid By</th> 
+                                <th>Date of Bill</th>
+                                <th>Date of Submission</th>
+                                <th>Amount(₹)</th>
+                                <th>Verified Status</th>
+                                <th>Status</th>
+                                <th class="lastandfirst"></th>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: red;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                    </table>
+            </div>
+            
+            <div id="BillReport" class="tabcontent">
+                    <table>
+                            <tr>
+                                <th class="lastandfirst"></th>
+                                <th>Bill Report</th>
+                                <th>Paid By</th> 
+                                <th>Date of Bill</th>
+                                <th>Date of Submission</th>
+                                <th>Amount(₹)</th>
+                                <th>Verified Status</th>
+                                <th>Status</th>
+                                <th class="lastandfirst"></th>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: #F0AF6C;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #F0AF6C;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Team Lunch at Starbucks</td>
+                                <td>Cash</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: red;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Complete</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                            <tr class="list">
+                                <td class="lastandfirst"><div class="round">
+                                        <input type="checkbox" id="checkbox" />
+                                        <label for="checkbox"></label>
+                                    </div>
+                                </td>
+                                <td>Cloud Space Storage</td>
+                                <td>Credit Card</td> 
+                                <td>10 Oct 2018</td>
+                                <td>10 Oct 2018</td>
+                                <td>3390.47</td>
+                                <td><i class="fas fa-flag" style="color: blue;"></i></td>
+                                <td><i class="fas fa-xs fa-circle" style="margin-right: 15px; color: #95B73F;"></i>Pending</td>
+                                <td class="lastandfirst">...</td>
+                            </tr>
+                    </table>
+            </div>
         </div>
     </div>
 
-    <div class="tabscontents">
-        <div id="AllBills" class="tabcontent">
-            <h3>All Bill</h3>
-            <p>London is the capital city of England.</p>
-        </div>
-        
-        <div id="PendingBills" class="tabcontent">
-            <h3>Pending Bills</h3>
-            <p>Paris is the capital of France.</p> 
-        </div>
-        
-        <div id="BillReport" class="tabcontent">
-            <h3>Bill Report</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
-    </div>
-
-    <button id="button">Click Me</button>
+    
 </main>
 
 <div class="bg-modal">
     <div class="modal-content">
         <div class="close">+</div>
+        <div class="content-modal">
+            <h3>ADD YOUR BILLS</h3>
+            <p>Submit your Extra Expenses/Bills for Reimbersement</p>
+
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Bill name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Team lunch at Starbucks">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-25">
+                        <label for="paidtype">Paid Type</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="paidtype" name="paidtype">
+                            <option value="australia">Choose Type</option>
+                            <option value="cash">Cash</option>
+                            <option value="card">Debit/Credit Card</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Amount(₹)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="lname" name="lastname" placeholder="3329.0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Date of Bill</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="date" name="date" value="2017-06-01" placeholder="Date: ">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Attach Your Bills</label>
+                    </div>
+                    <div class="col-75">
+                        <div class="select-file">
+                            <h3>Drag Files here</h3>
+                            <h2>Or</h2>
+                            <input type="file" name="" multiple>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">&nbsp;</div>
+                    <div class="col-75">
+                        <input type="submit" value="Save">
+                        <input type="reset" value="Clear">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    
 </div>
 
 <!-- Custom javascript -->
